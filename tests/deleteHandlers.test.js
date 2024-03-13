@@ -4,7 +4,7 @@ const config = require('../config');
 
 test('Response body should delete Ok True', async () => {
 	let actualResponseBody;
-    try {
+	try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
 			method: 'DELETE',
 		});
@@ -17,7 +17,7 @@ test('Response body should delete Ok True', async () => {
 
 test('Status code should be 200', async () => {
 	let actualStatusCode;
-    try {
+	try {
 		const response = await fetch(`${config.API_URL}/api/v1/kits/2`, {
 			method: 'DELETE',
 		});

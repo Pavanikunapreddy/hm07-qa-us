@@ -4,15 +4,15 @@ const requestBody = {
 	
 	"productsList": [
 		{
-		  "id": 5,
-		  "quantity": 1
+			"id": 5,
+			"quantity": 1
 		}
-	  ]
+		]
 }
 
 test('Status code should be 201', async () => {
 	let actualStatusCode;
-    try {
+	try {
 		const response = await fetch(`${config.API_URL}/api/v1/orders`,{
 			method: 'POST',
 			headers: {
@@ -34,7 +34,7 @@ test('Status code should be 201', async () => {
 
 test('Response body should be ....', async () => {
 	let actualResponseBody;
-    try {
+	try {
 		const response = await fetch(`${config.API_URL}/api/v1/orders`,{
 			method: 'POST',
 			headers: {

@@ -1,28 +1,26 @@
 // eslint-disable-next-line no-undef
 const config = require('../config');
 
-
-
 const requestBody = {
 	
-    "productsList": [
-        {
-            "id": 1,
-            "quantity": 2
-        },
-        {
-            "id": 6,
-            "quantity": 2
-        }
-    ]
+	"productsList": [
+	{
+	"id": 1,
+	"quantity": 2
+	},
+	{
+	"id": 6,
+	"quantity": 2
+	}
+	]
 	
 }
 
 test('Status code should be 200 ', async () => {
 	let actualStatusCode;
 
-    try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/2`,{
+	try {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/6`,{
 			method: 'PUT',
 			headers: {
 				'content-Type':'application/json'
@@ -41,8 +39,8 @@ test('Status code should be 200 ', async () => {
 test('Response body should contains Ok True', async () => {
 	let actualResponseBody;
 
-    try {
-		const response = await fetch(`${config.API_URL}/api/v1/kits/2`,{
+	try {
+		const response = await fetch(`${config.API_URL}/api/v1/kits/6`,{
 			method: 'PUT',
 			headers: {
 				'content-Type':'application/json'
